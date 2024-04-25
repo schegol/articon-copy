@@ -1,5 +1,11 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Индивидуальное обучение");
+
+if (!$USER->IsAuthorized()) {
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: http://dk-edu.com');
+    exit();
+}
 ?>
 
 <section class="section-learning-info">
