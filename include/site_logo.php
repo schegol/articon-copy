@@ -1,0 +1,1 @@
+<img src="/local/templates/articon/images/logo.png" alt="Логотип Articon" style="width: 202px;">

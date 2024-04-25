@@ -1,0 +1,1 @@
+<img src="/local/templates/articon/images/learning/s-learning-info-img.png" alt="Фото класса для обучения">

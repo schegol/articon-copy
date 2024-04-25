@@ -1,0 +1,3 @@
+<?
+$MESS['NEWS_LIST_LECTURERS_PAGE_TOP_HEADING'] = 'центр Dental Korzina';
+$MESS['NEWS_LIST_LECTURERS_COURSES_HEADING'] = 'Ведет курсы';

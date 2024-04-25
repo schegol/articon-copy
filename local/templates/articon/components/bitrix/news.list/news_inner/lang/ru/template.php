@@ -1,0 +1,3 @@
+<?
+$MESS['NEWS_LIST_NEWS_INNER_HEADING'] = 'Почитать еще';
+$MESS['NEWS_LIST_NEWS_INNER_DETAIL_LINK'] = 'Подробнее';
