@@ -3,9 +3,13 @@ $(function () {
         slidesPerView: 1,
         autoHeight: true,
         allowTouchMove: false,
+        observer: true,
+        observeParents: true,
     });
 
     const mpCalendarTopSlider = new Swiper('.mp-calendar-top-slider .swiper', {
+        observer: true,
+        observeParents: true,
         slidesPerView: 1,
         navigation: {
             nextEl: '.mp-calendar-top-slider .swiper-button-next',

@@ -207,6 +207,33 @@ a.video {
     font-size: 12px;
 }
 
+.course-item--color-1 .course-item-inner,
+.course-item--color-1 .course-item-inner::before {
+    background-color: #1B3B75;
+}
+
+.course-item--color-1 .course-item-type,
+.course-item--color-1 .course-item-title,
+.course-item--color-1 .course-item-descr,
+.course-item--color-1 .course-item-param,
+.course-item--color-1 .course-item-speaker-name,
+.course-item--color-1 .more-link {
+    color: #fff;
+}
+
+.course-item--color-1 .more-link::after {
+    background-color: #fff;
+}
+
+.course-item--color-1 .course-item-param {
+    border-color: #fff;
+}
+
+.course-item--color-2 .course-item-inner,
+.course-item--color-2 .course-item-inner::before {
+    background-color: #68CBE1;
+}
+
 @media (min-width: 768px) {
     h1.section-title,
     .section-title-block h1 {
