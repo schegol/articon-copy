@@ -65,15 +65,15 @@ class CAuroriCalendar extends CBitrixComponent {
         );
         while ($arrEventsSelection = $objEventsSelection->GetNext()) {
             $dateStart = new DateTime($arrEventsSelection['DATE_ACTIVE_FROM']);
-            $dateEnd = new DateTime($arrEventsSelection['DATE_ACTIVE_TO']);
+            $dateEnd = new DateTime($arrEventsSelection['DATE_ACTIVE_TO']?:$arrEventsSelection['DATE_ACTIVE_FROM']);
             $daysLen  = $dateEnd->diff($dateStart)->format('%a');
             $arrEventsSelection['DAYS_LENGTH'] = $daysLen + 1;
 
             if ($arrEventsSelection['DAYS_LENGTH'] > 1) {
                 $dateStartShort = FormatDate('j', MakeTimeStamp($arrEventsSelection['DATE_ACTIVE_FROM']));
                 $dateStartIsWeekend = in_array(date('w', strtotime($arrEventsSelection['DATE_ACTIVE_FROM'])), [0, 6]);
-                $dateEndShort = FormatDate('j', MakeTimeStamp($arrEventsSelection['DATE_ACTIVE_TO']));
-                $dateEndIsWeekend = in_array(date('w', strtotime($arrEventsSelection['DATE_ACTIVE_TO'])), [0, 6]);
+                $dateEndShort = FormatDate('j', MakeTimeStamp($arrEventsSelection['DATE_ACTIVE_TO']?:$arrEventsSelection['DATE_ACTIVE_FROM']));
+                $dateEndIsWeekend = in_array(date('w', strtotime($arrEventsSelection['DATE_ACTIVE_TO']?:$arrEventsSelection['DATE_ACTIVE_FROM'])), [0, 6]);
 
                 if ($dateStartIsWeekend && $dateEndIsWeekend) {
                     $dateWindow = '<span>'.$dateStartShort.'-'.$dateEndShort.'</span>';
