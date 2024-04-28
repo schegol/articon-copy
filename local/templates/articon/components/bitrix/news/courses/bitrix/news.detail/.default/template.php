@@ -220,7 +220,7 @@ $this->setFrameMode(true);
                                             </div>
                                         <?endif?>
 
-                                        <?if (strlen($arResult['DIRECTION_DATA']['PROPS']['RESULT']['VALUE']['TEXT'])):?>
+                                        <?if (is_array($arResult['DIRECTION_DATA']['PROPS']['RESULT']['VALUE']) && strlen($arResult['DIRECTION_DATA']['PROPS']['RESULT']['VALUE']['TEXT'])):?>
                                             <div class="course-info-block course-info-block--result">
                                                 <h3 class="course-info-block-title">
                                                     <?=GetMessage('NEWS_COURSES_NEWS_DETAIL_DEFAULT_RESULT_HEADING')?>
