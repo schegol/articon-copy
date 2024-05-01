@@ -41,7 +41,8 @@ $this->setFrameMode(true);
                                                 <div class="course-top-info">
                                                     <div class="course-top-info-left">
                                                         <div class="course-top-info-type">
-                                                            <?=GetMessage('NEWS_DIRECTIONS_NEWS_DETAIL_DEFAULT_TYPE_REPLACEMENT')?>
+                                                            <?//=GetMessage('NEWS_DIRECTIONS_NEWS_DETAIL_DEFAULT_TYPE_REPLACEMENT')?>
+                                                            <?=$arResult['PROPERTIES']['BG_COLOR']['VALUE']?>
                                                         </div>
                                                         <div class="course-top-info-params-block">
                                                             <div class="course-top-info-params">

@@ -3,7 +3,9 @@
 use Bitrix\Main\Page\Asset;
 
 ?>
-        <?getSeoBlock()?>
+        <section class="section-seo">
+            <?getSeoBlock()?>
+        </section>
 
         <footer>
             <div class="footer-content-block">

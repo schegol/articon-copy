@@ -29,12 +29,12 @@ $this->setFrameMode(true);
                                     switch ($modulo) {
                                         case '0':
                                         case '5':
-                                            $class = 'green';
+                                            $class = 'blue';
                                             break;
 
                                         case '1':
                                         case '4':
-                                            $class = 'purple';
+                                            $class = 'skyblue';
                                             break;
 
                                         case '2':

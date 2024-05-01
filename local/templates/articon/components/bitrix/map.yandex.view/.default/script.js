@@ -28,7 +28,7 @@ if (!window.BX_YMapAddPlacemark)
 			props,
 			{
 				balloonCloseButton: true,
-				iconImageHref: templateFolderPath+'/images/map-pin.svg',
+				iconImageHref: templateFolderPath+'/images/map-pin-new.svg',
 				iconImageSize: [30, 30],
 				iconImageOffset: [-15, -15],
 			}

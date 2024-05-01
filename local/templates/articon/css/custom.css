@@ -1,3 +1,8 @@
+:root {
+    --new-blue: #1B3B75;
+    --new-skyblue: #68CBE1;
+}
+
 .footer-menu > ul > li.active > a {
     color: #828282;
 }
@@ -209,7 +214,7 @@ a.video {
 
 .course-item--color-1 .course-item-inner,
 .course-item--color-1 .course-item-inner::before {
-    background-color: #1B3B75;
+    background-color: var(--new-blue);
 }
 
 .course-item--color-1 .course-item-type,
@@ -231,7 +236,246 @@ a.video {
 
 .course-item--color-2 .course-item-inner,
 .course-item--color-2 .course-item-inner::before {
-    background-color: #68CBE1;
+    background-color: var(--new-skyblue);
+}
+
+.mp-one-slider,
+.mp-one-slider::before {
+    background-color: var(--new-blue);
+}
+
+.mp-one-slider::before {
+    right: -1px;
+}
+
+.rent-single-top-slider::before {
+    right: -1px;
+}
+
+.mp-one-slide-item__title {
+    color: #fff;
+}
+
+.mp-one-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before,
+.mp-one-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.mp-one-slider .swiper-button-next::after,
+.mp-one-slider .swiper-button-prev::after {
+    background-color: #fff;
+}
+
+.mp-one-slider .swiper-pagination .swiper-pagination-bullet,
+.mp-one-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border-color: #fff;
+}
+
+.mp-news-item--blue .mp-news-item-inner::before,
+.mp-news-item--blue .mp-news-item-inner {
+    background-color: var(--new-blue);
+}
+
+.mp-news-item--skyblue .mp-news-item-inner::before,
+.mp-news-item--skyblue .mp-news-item-inner {
+    background-color: var(--new-skyblue);
+}
+
+.mp-news-item--blue .mp-news-item-date,
+.mp-news-item--blue .mp-news-item-title ,
+.mp-news-item--blue .mp-news-item-descr,
+.mp-news-item--blue .more-link {
+    color: #fff;
+}
+
+.mp-news-item--blue .more-link::after {
+    background-color: #fff;
+}
+
+.mp-news-photo-item-more {
+    background-color: var(--new-blue);
+}
+
+.mp-news-photo-item-more__title {
+    color: #fff;
+}
+
+.mobile-menu > ul > li a {
+    font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.about-photo-item--blue .about-photo-item-inner,
+.about-photo-item--blue .about-photo-item-inner::before {
+    background-color: var(--new-blue);
+}
+
+.about-photo-item--skyblue .about-photo-item-inner,
+.about-photo-item--skyblue .about-photo-item-inner::before {
+    background-color: var(--new-skyblue);
+}
+
+.about-photo-item--blue .about-photo-item-title,
+.about-photo-item--blue .more-link {
+    color: #fff;
+}
+
+.about-photo-item--blue .more-link::after {
+    background-color: #fff;
+}
+
+.lecturer-course-slide-item--blue,
+.lecturer-course-slide-item--blue::before {
+    background-color: var(--new-blue);
+}
+
+.lecturer-course-slide-item--skyblue,
+.lecturer-course-slide-item--skyblue::before {
+    background-color: var(--new-skyblue);
+}
+
+.lecturer-course-slide-item--blue .lecturer-course-slide-item-title {
+    color: #fff;
+}
+
+.courses-tab.active {
+    background-color: var(--new-skyblue);
+    border-color: var(--new-skyblue);
+}
+
+.pagination ul li.active a {
+    color: #fff;
+    background-color: var(--new-blue);
+    border-color: var(--new-blue);
+}
+
+.course-info-block ol li::before {
+    background-color: var(--new-blue);
+}
+
+.green-btn {
+    background-color: var(--new-blue);
+    border-color: var(--new-blue);
+    color: #fff;
+}
+
+.green-btn:hover,
+.green-btn:focus {
+    background-color: var(--new-blue);
+    border-color: var(--new-blue);
+    color: #fff;
+    opacity: .85;
+}
+
+.course-review--blue .course-review-inner,
+.course-review--blue .course-review-inner::before {
+    background-color: var(--new-blue);
+}
+
+.course-review--blue .course-review-date,
+.course-review--blue .course-review-title-block,
+.course-review--blue .course-review-descr {
+    color: #fff;
+}
+
+.course-review--skyblue .course-review-inner,
+.course-review--skyblue .course-review-inner::before {
+    background-color: var(--new-skyblue);
+}
+
+.course-top--color-1,
+.course-top--color-1::before,
+.course-top--color-1 .course-top-info-alt-params-block,
+.course-top--color-1 .course-top-info-photo-item-more {
+    background-color: var(--new-blue);
+}
+
+.course-top--color-1 .course-top-lecturer-name,
+.course-top--color-1 .course-top-lecturer-state,
+.course-top--color-1 .course-top-info-alt-param,
+.course-top--color-1 .course-top-info-photo-item-more__title {
+    color: #fff;
+}
+
+.course-top--color-2,
+.course-top--color-2::before,
+.course-top--color-2 .course-top-info-alt-params-block,
+.course-top--color-2 .course-top-info-photo-item-more {
+    background-color: var(--new-skyblue);
+}
+
+.rent-item--blue,
+.rent-item--blue::before {
+    background-color: var(--new-blue);
+}
+
+.rent-item--blue .rent-item-title,
+.rent-item--blue .rent-item-capacity,
+.rent-item--blue .rent-item-price-table-h-col,
+.rent-item--blue .rent-item-price-t-item-col,
+.rent-item--blue .more-link {
+    color: #fff;
+}
+
+.rent-item--blue .more-link::after {
+    background-color: #fff;
+}
+
+.rent-item--blue .rent-item-price-t-item {
+    border-color: #fff;
+}
+
+.rent-item--skyblue,
+.rent-item--skyblue::before {
+    background-color: var(--new-skyblue);
+}
+
+.rent-single-top-slider,
+.rent-single-top-slider::before {
+    background-color: var(--new-blue);
+}
+
+.rent-single-top-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.rent-single-top-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before,
+.rent-single-top-slider .swiper-button-next::after,
+.rent-single-top-slider .swiper-button-prev::after {
+    background-color: #fff;
+}
+
+.rent-single-top-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet,
+.rent-single-top-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border-color: #fff;
+}
+
+.learning-direction-item--blue,
+.learning-direction-item--blue::before {
+    background-color: var(--new-blue);
+}
+
+.learning-direction-item--blue .learning-direction-item-title,
+.learning-direction-item--blue .more-link {
+    color: #fff;
+}
+
+.learning-direction-item--blue .more-link::after {
+    background-color: #fff;
+}
+
+.learning-direction-item--skyblue,
+.learning-direction-item--skyblue::before {
+    background-color: var(--new-skyblue);
+}
+
+.contacts-block--blue,
+.contacts-block--blue::before {
+    background-color: var(--new-blue);
+}
+
+.contacts-block--blue .contacts-block-city,
+.contacts-block--blue .contact-item__content,
+.contacts-block--blue .contact-item__content a {
+    color: #fff;
+}
+
+.contacts-block--skyblue,
+.contacts-block--skyblue::before {
+    background-color: var(--new-skyblue);
 }
 
 @media (min-width: 768px) {
@@ -293,6 +537,14 @@ a.video {
     h1.section-title,
     .section-title-block h1 {
         font-size: 28px;
+    }
+
+    .mp-one-slider::before {
+        right: -2px;
+    }
+
+    .rent-single-top-slider::before {
+        right: -2px;
     }
 }
 

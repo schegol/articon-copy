@@ -31,7 +31,7 @@ $this->setFrameMode(true);?>
                                     <a class="mp-news-photo-item modal-btn" href="#modal-photos--photo" data-index="3">
                                         <div class="mp-news-photo-item-more">
                                             <div class="mp-news-photo-item-more__icon">
-                                                <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/mp-news-photo-item-more-icon.svg" alt="<?=GetMessage('NEWS_DETAIL_INDEX_MEDIA_PHOTOS_ICON_ALT')?>">
+                                                <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/mp-news-photo-item-more-icon-white.svg" alt="<?=GetMessage('NEWS_DETAIL_INDEX_MEDIA_PHOTOS_ICON_ALT')?>">
                                             </div>
                                             <div class="mp-news-photo-item-more__title">
                                                 <?=(count($arResult['PROPERTIES']['GALLERY']['VALUE']) - 3).GetMessage('NEWS_DETAIL_INDEX_MEDIA_PHOTOS_MORE_BTN')?>

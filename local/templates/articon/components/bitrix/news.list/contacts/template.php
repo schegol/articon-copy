@@ -10,7 +10,12 @@ $this->setFrameMode(true);
                     <div class="s-top-title-block">
                         <h2><?=$APPLICATION->GetTitle()?></h2>
                     </div>
-                    <?foreach ($arResult['ITEMS'] as $arItem):?>
+                    <?foreach ($arResult['ITEMS'] as $arItem):
+                        $iconStyle = '';
+                        if (in_array($arItem['PROPERTIES']['BG_COLOR']['VALUE_XML_ID'], ['blue', 'skyblue'])) {
+                            $iconStyle = '-'.$arItem['PROPERTIES']['BG_COLOR']['VALUE_XML_ID'];
+                        }
+                    ?>
                         <div class="contacts-block contacts-block--<?=$arItem['PROPERTIES']['BG_COLOR']['VALUE_XML_ID']?>">
                             <div class="contacts-block-city">
                                 <?=$arItem['NAME']?>
@@ -21,7 +26,7 @@ $this->setFrameMode(true);
                                         <?if (strlen($arItem['PROPERTIES']['ADDRESS']['VALUE']['TEXT'])):?>
                                             <div class="contact-item contact-item-address">
                                                 <div class="contact-item__icon">
-                                                    <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/map-pin.svg" alt="<?=GetMessage('NEWS_LIST_CONTACTS_ICON_ADDRESS')?>">
+                                                    <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/map-pin<?=$iconStyle?>.svg" alt="<?=GetMessage('NEWS_LIST_CONTACTS_ICON_ADDRESS')?>">
                                                 </div>
                                                 <div class="contact-item__content">
                                                     <?=$arItem['PROPERTIES']['ADDRESS']['~VALUE']['TEXT']?>
@@ -32,7 +37,7 @@ $this->setFrameMode(true);
                                         <?if (strlen($arItem['PROPERTIES']['SCHEDULE']['VALUE']['TEXT'])):?>
                                             <div class="contact-item contact-item--time">
                                                 <div class="contact-item__icon">
-                                                    <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/clock.svg" alt="<?=GetMessage('NEWS_LIST_CONTACTS_ICON_SCHEDULE')?>">
+                                                    <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/clock<?=$iconStyle?>.svg" alt="<?=GetMessage('NEWS_LIST_CONTACTS_ICON_SCHEDULE')?>">
                                                 </div>
                                                 <div class="contact-item__content">
                                                     <?=$arItem['PROPERTIES']['SCHEDULE']['~VALUE']['TEXT']?>
@@ -43,7 +48,7 @@ $this->setFrameMode(true);
                                         <?if (strlen($arItem['PROPERTIES']['PHONE']['VALUE']['TEXT'])):?>
                                             <div class="contact-item contact-item--phone">
                                                 <div class="contact-item__icon">
-                                                    <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/phone.svg" alt="<?=GetMessage('NEWS_LIST_CONTACTS_ICON_PHONE')?>">
+                                                    <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/phone<?=$iconStyle?>.svg" alt="<?=GetMessage('NEWS_LIST_CONTACTS_ICON_PHONE')?>">
                                                 </div>
                                                 <div class="contact-item__content">
                                                     <?=$arItem['PROPERTIES']['PHONE']['~VALUE']['TEXT']?>
@@ -54,7 +59,7 @@ $this->setFrameMode(true);
                                         <?if (strlen($arItem['PROPERTIES']['EMAIL']['VALUE']['TEXT'])):?>
                                             <div class="contact-item  contact-item--mail">
                                                 <div class="contact-item__icon">
-                                                    <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/mail.svg" alt="<?=GetMessage('NEWS_LIST_CONTACTS_ICON_EMAIL')?>">
+                                                    <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/mail<?=$iconStyle?>.svg" alt="<?=GetMessage('NEWS_LIST_CONTACTS_ICON_EMAIL')?>">
                                                 </div>
                                                 <div class="contact-item__content">
                                                     <?=$arItem['PROPERTIES']['EMAIL']['~VALUE']['TEXT']?>
@@ -65,7 +70,7 @@ $this->setFrameMode(true);
                                         <?if (strlen($arItem['PROPERTIES']['WEBSITE']['VALUE']['TEXT'])):?>
                                             <div class="contact-item contact-item--website">
                                                 <div class="contact-item__icon">
-                                                    <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/internet.svg" alt="<?=GetMessage('NEWS_LIST_CONTACTS_ICON_WEBSITE')?>">
+                                                    <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/internet<?=$iconStyle?>.svg" alt="<?=GetMessage('NEWS_LIST_CONTACTS_ICON_WEBSITE')?>">
                                                 </div>
                                                 <div class="contact-item__content">
                                                     <?=$arItem['PROPERTIES']['WEBSITE']['~VALUE']['TEXT']?>

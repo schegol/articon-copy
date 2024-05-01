@@ -123,9 +123,9 @@ $this->setFrameMode(true);
                                     <div class="swiper-wrapper">
                                         <?foreach ($arItem['COURSES'] as $i => $arCourse):
                                             if ($i % 3 == 0)
-                                                $color = 'green';
+                                                $color = 'blue';
                                             elseif ($i % 3 == 1)
-                                                $color = 'purple';
+                                                $color = 'skyblue';
                                             else
                                                 $color = 'black';
                                         ?>

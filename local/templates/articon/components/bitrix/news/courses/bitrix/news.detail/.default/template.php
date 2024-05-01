@@ -14,7 +14,7 @@ $this->setFrameMode(true);
                     </div>
                     <div class="course-block">
                         <div class="course-top-block">
-                            <div class="course-top course-top--<?=$arResult['DIRECTION_DATA']['PROPS']['BG_COLOR']['VALUE_XML_ID']?>">
+                            <div class="course-top course-top--<?=$arResult['PROPERTIES']['CITY']['VALUE_XML_ID']?>">
                                 <div class="row">
                                     <div class="col-12 col-xl-3">
                                         <div class="course-top-left">
@@ -41,7 +41,7 @@ $this->setFrameMode(true);
                                                 <div class="course-top-info">
                                                     <div class="course-top-info-left">
                                                         <div class="course-top-info-type">
-                                                            <?=$arResult['DIRECTION_DATA']['PROPS']['BG_COLOR']['VALUE']?>
+                                                            <?=$arResult['PROPERTIES']['CITY']['VALUE']?>
                                                         </div>
                                                         <div class="course-top-info-params-block">
                                                             <div class="course-top-info-params">
@@ -117,7 +117,7 @@ $this->setFrameMode(true);
                                                                             <a class="course-top-info-photo-item modal-btn" href="#modal-photos--photo" data-index="3">
                                                                                 <div class="course-top-info-photo-item-more">
                                                                                     <div class="course-top-info-photo-item-more__icon">
-                                                                                        <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/mp-news-photo-item-more-icon.svg" alt="<?=GetMessage('NEWS_COURSES_NEWS_DETAIL_DEFAULT_GALLERY_ICON_ALT')?>">
+                                                                                        <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/mp-news-photo-item-more-icon<?=$arResult['PROPERTIES']['CITY']['VALUE_XML_ID'] == 'color-1' ? '-white' : ''?>.svg" alt="<?=GetMessage('NEWS_COURSES_NEWS_DETAIL_DEFAULT_GALLERY_ICON_ALT')?>">
                                                                                     </div>
                                                                                     <div class="course-top-info-photo-item-more__title">
                                                                                         <?=(count($arResult['DIRECTION_DATA']['PROPS']['GALLERY']['VALUE']) - 3).GetMessage('NEWS_COURSES_NEWS_DETAIL_DEFAULT_GALLERY_COUNTER')?>

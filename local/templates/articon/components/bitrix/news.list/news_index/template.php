@@ -21,9 +21,9 @@ $this->setFrameMode(true);
             <div class="mp-news-items">
                 <?foreach ($arResult['ITEMS'] as $i => $arItem):
                     if ($i == 0)
-                        $color = 'green';
+                        $color = 'blue';
                     else
-                        $color = 'purple';
+                        $color = 'skyblue';
                 ?>
                     <div class="mp-news-item-wrapper">
                         <div class="mp-news-item mp-news-item--<?=$color?>">

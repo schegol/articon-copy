@@ -13,7 +13,8 @@ $this->setFrameMode(true);?>
                                     <div class="course-item course-item--<?=$arItem['PROPERTIES']['BG_COLOR']['VALUE_XML_ID']?>">
                                         <div class="course-item-inner">
                                             <div class="course-item-type">
-                                                <?=GetMessage('NEWS_LIST_DIRECTIONS_AJAX_TYPE_REPLACEMENT')?>
+                                                <?//=GetMessage('NEWS_LIST_DIRECTIONS_AJAX_TYPE_REPLACEMENT')?>
+                                                <?=$arItem['PROPERTIES']['BG_COLOR']['VALUE']?>
                                             </div>
                                             <div class="course-item-left">
                                                 <div class="course-item-speaker-img">

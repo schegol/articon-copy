@@ -173,7 +173,7 @@ $this->setFrameMode(true);?>
                             <div class="about-photo-items">
                                 <?if (is_array($arResult['PROPERTIES']['GALLERY_1_PHOTOS']['VALUE']) && !empty($arResult['PROPERTIES']['GALLERY_1_PHOTOS']['VALUE'])):?>
                                     <div class="about-photo-item-wrapper about-photo-item-wrapper--1">
-                                        <div class="about-photo-item about-photo-item--purple">
+                                        <div class="about-photo-item about-photo-item--blue">
                                             <div class="about-photo-item-inner">
                                                 <?if (strlen($arResult['PROPERTIES']['GALLERY_1_HEADING']['VALUE'])):?>
                                                     <div class="about-photo-item-title h4">
@@ -268,7 +268,7 @@ $this->setFrameMode(true);?>
 
                                 <?if (is_array($arResult['PROPERTIES']['GALLERY_2_PHOTOS']['VALUE']) && !empty($arResult['PROPERTIES']['GALLERY_2_PHOTOS']['VALUE'])):?>
                                     <div class="about-photo-item-wrapper about-photo-item-wrapper--2">
-                                        <div class="about-photo-item about-photo-item--purple">
+                                        <div class="about-photo-item about-photo-item--skyblue">
                                             <div class="about-photo-item-inner">
                                                 <?if (strlen($arResult['PROPERTIES']['GALLERY_2_HEADING']['VALUE'])):?>
                                                     <div class="about-photo-item-title h4">
@@ -363,7 +363,7 @@ $this->setFrameMode(true);?>
 
                                 <?if (is_array($arResult['PROPERTIES']['GALLERY_3_PHOTOS']['VALUE']) && !empty($arResult['PROPERTIES']['GALLERY_3_PHOTOS']['VALUE'])):?>
                                     <div class="about-photo-item-wrapper about-photo-item-wrapper--3">
-                                        <div class="about-photo-item about-photo-item--purple">
+                                        <div class="about-photo-item about-photo-item--skyblue">
                                             <div class="about-photo-item-inner">
                                                 <?if (strlen($arResult['PROPERTIES']['GALLERY_3_HEADING']['VALUE'])):?>
                                                     <div class="about-photo-item-title h4">
@@ -458,7 +458,7 @@ $this->setFrameMode(true);?>
 
                                 <?if (is_array($arResult['PROPERTIES']['GALLERY_4_PHOTOS']['VALUE']) && !empty($arResult['PROPERTIES']['GALLERY_4_PHOTOS']['VALUE'])):?>
                                     <div class="about-photo-item-wrapper about-photo-item-wrapper--4">
-                                        <div class="about-photo-item about-photo-item--purple">
+                                        <div class="about-photo-item about-photo-item--blue">
                                             <div class="about-photo-item-inner">
                                                 <?if (strlen($arResult['PROPERTIES']['GALLERY_4_HEADING']['VALUE'])):?>
                                                     <div class="about-photo-item-title h4">
