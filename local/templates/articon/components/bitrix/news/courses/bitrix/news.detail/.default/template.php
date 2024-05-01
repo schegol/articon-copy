@@ -257,6 +257,7 @@ $this->setFrameMode(true);
             "SOGLASIE" => "Y",
             "SHOW_ERROR" => "Y",
             "COURSE_ID" => $arResult["ID"],
+            "SHOW_TEXT" => "Y",
         )
     );?>
 

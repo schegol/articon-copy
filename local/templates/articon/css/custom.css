@@ -478,6 +478,31 @@ a.video {
     background-color: var(--new-skyblue);
 }
 
+.form-replacement-text p {
+    margin: 0 0 10px;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.form-replacement-text p:last-child {
+    margin: 0;
+}
+
+.form-replacement-text a {
+    text-decoration: none;
+    color: var(--new-blue);
+    font-weight: 700;
+    white-space: nowrap;
+    transition: opacity .3s;
+}
+
+.form-replacement-text a:hover,
+.form-replacement-text a:focus {
+    opacity: .85;
+    outline: none;
+}
+
 @media (min-width: 768px) {
     h1.section-title,
     .section-title-block h1 {
@@ -510,6 +535,11 @@ a.video {
     .fb-modal--form-success p {
         font-size: 21px;
     }
+
+    .form-replacement-text p {
+        margin: 0 0 15px;
+        font-size: 21px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -530,6 +560,11 @@ a.video {
 
     .mp-news-items {
         height: 100%;
+    }
+
+    .form-replacement-text p {
+        margin: 0 0 20px;
+        font-size: 24px;
     }
 }
 

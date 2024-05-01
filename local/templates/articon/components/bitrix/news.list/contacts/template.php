@@ -194,5 +194,6 @@ $this->setFrameMode(true);
         "LOAD_JS_CSS" => "Y",
         "SOGLASIE" => "Y",
         "SHOW_ERROR" => "Y",
+        "SHOW_TEXT" => "Y",
     )
 );?>

@@ -5,7 +5,7 @@ if(!CModule::IncludeModule("iblock"))
     return;
 
 $arIBlocks=array();
-$db_iblock = CIBlock::GetList(array("SORT"=>"ASC"), array("SITE_ID"=>$_REQUEST["site"], "TYPE" => "pk_forms"));
+$db_iblock = CIBlock::GetList(array("SORT"=>"ASC"), array("SITE_ID"=>$_REQUEST["site"], "TYPE" => "forms"));
 while($arRes = $db_iblock->Fetch())
     $arIBlocks[$arRes["ID"]] = "[".$arRes["ID"]."] ".$arRes["NAME"];
 
@@ -41,6 +41,12 @@ $arComponentParameters = array(
             "NAME" => "Показывать текст ошибок",
             "TYPE" => "CHECKBOX",
             "DEFAULT" => "Y",
+        ),
+        "SHOW_TEXT" => array(
+            "PARENT" => "BASE",
+            "NAME" => "Показывать текст вместо формы",
+            "TYPE" => "CHECKBOX",
+            "DEFAULT" => "N",
         ),
     )
 );
