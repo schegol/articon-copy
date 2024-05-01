@@ -503,6 +503,10 @@ a.video {
     outline: none;
 }
 
+.rent-items-block__heading {
+    margin-top: 35px;
+}
+
 @media (min-width: 768px) {
     h1.section-title,
     .section-title-block h1 {
@@ -540,6 +544,10 @@ a.video {
         margin: 0 0 15px;
         font-size: 21px;
     }
+
+    .rent-items-block__heading {
+        margin-top: 50px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -565,6 +573,10 @@ a.video {
     .form-replacement-text p {
         margin: 0 0 20px;
         font-size: 24px;
+    }
+
+    .rent-items-block__heading {
+        margin-top: 75px;
     }
 }
 
