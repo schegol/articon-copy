@@ -1,0 +1,77 @@
+.calendar-events {
+    /*display: flex !important;*/
+    /*flex-direction: column;*/
+}
+
+.calendar-events__event {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.calendar-events__event:not(:last-of-type) {
+    margin-bottom: 25px;
+}
+
+.calendar-events__event-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.calendar-events__event-city {
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .calendar-events__event {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+
+    .calendar-events__event:not(:last-of-type) {
+        margin-bottom: 35px;
+    }
+
+    .calendar-events__event-info {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .fb-modal-inner.fb-modal-inner--calendar {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .calendar-events__event {
+        font-size: 18px;
+    }
+
+    .calendar-events__event:not(:last-of-type) {
+        margin-bottom: 45px;
+    }
+
+    .calendar-events__event-info {
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .calendar-events__event {
+        font-size: 21px;
+    }
+
+    .calendar-events__event:not(:last-of-type) {
+        margin-bottom: 50px;
+    }
+
+    .fb-modal-inner.fb-modal-inner--calendar {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+}

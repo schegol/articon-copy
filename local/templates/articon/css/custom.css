@@ -507,6 +507,14 @@ a.video {
     margin-top: 35px;
 }
 
+.mp-calendar-item__descr.mp-calendar-item__descr--big {
+    font-size: 12px;
+}
+
+.mp-calendar-item--default-color {
+    border-color: var(--new-skyblue);
+}
+
 @media (min-width: 768px) {
     h1.section-title,
     .section-title-block h1 {
@@ -607,5 +615,9 @@ a.video {
 
     .fb-modal--form-success p {
         font-size: 24px;
+    }
+
+    .mp-calendar-item__descr.mp-calendar-item__descr--big {
+        font-size: 16px;
     }
 }

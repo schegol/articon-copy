@@ -91,7 +91,7 @@ $this->setFrameMode(true);
                                             <?if ($arDay['EMPTY'] == 'Y'):?>
                                                 <div class="mp-calendar-item-wrapper"></div>
                                             <?else:?>
-                                                <?if (empty($arDay['EVENT'])):?>
+                                                <?if (empty($arDay['EVENTS'])):?>
                                                     <div class="mp-calendar-item-wrapper">
                                                         <div class="mp-calendar-item<?=$arDay['IS_WEEKEND'] == 'Y' ? ' mp-calendar-item--weekend' : ''?>">
                                                             <div class="mp-calendar-item__day">
@@ -99,47 +99,21 @@ $this->setFrameMode(true);
                                                             </div>
                                                         </div>
                                                     </div>
-                                                <?else:
-                                                    if ($arDay['SUBDUED'] == 'Y' && $arDay['DAY_NUM'] > 1) {
-                                                        continue;
-                                                    } elseif ($arDay['SUBDUED'] == 'Y' && $arDay['DAY_NUM'] == 1) {
-                                                        $arDay['EVENT']['DAYS_LENGTH'] = $arDay['EVENT']['DAYS_LEFT'];
-                                                    }
-
-                                                    $lenVariable = strlen($arDay['EVENT']['DAYS_LEFT_THIS_MONTH']) ? $arDay['EVENT']['DAYS_LEFT_THIS_MONTH'] : $arDay['EVENT']['DAYS_LENGTH'];
-
-                                                    $lenClass = '';
-                                                    if ($lenVariable == 2) {
-                                                        $lenClass = ' mp-calendar-item-wrapper--two-days';
-                                                    } elseif ($lenVariable == 3) {
-                                                        $lenClass = ' mp-calendar-item-wrapper--three-days';
-                                                    } elseif ($lenVariable == 4) {
-                                                        $lenClass = ' mp-calendar-item-wrapper--four-days';
-                                                    }
-                                                ?>
-                                                    <div class="mp-calendar-item-wrapper<?=$lenClass?>">
-                                                        <a class="mp-calendar-item mp-calendar-item--<?=$arDay['EVENT']['PROPERTY_BG_COLOR_XML_ID']?>" href="<?=$arDay['EVENT']['DETAIL_PAGE_URL']?>">
+                                                <?else:?>
+                                                    <div class="mp-calendar-item-wrapper">
+                                                        <a class="mp-calendar-item mp-calendar-item--default-color" href="javascript:;" data-calendar-item data-date="<?=$arDay['FULL_DATE']?>" data-iblock="<?=$arParams['IBLOCK_ID']?>" data-type="ajax" data-src="/ajax/calendar_date.php?date=<?=$arDay['FULL_DATE']?>&iblock=<?=$arParams['IBLOCK_ID']?>">
                                                             <div class="mp-calendar-item__day">
-                                                                <?if ($arDay['EVENT']['DAYS_LENGTH'] == 1):?>
-                                                                    <?if ($arDay['IS_WEEKEND'] == 'Y'):?>
-                                                                        <span><?=$arDay['DAY_NUM']?></span>
-                                                                    <?else:?>
-                                                                        <?=$arDay['DAY_NUM']?>
-                                                                    <?endif?>
+                                                                <?if ($arDay['IS_WEEKEND'] == 'Y'):?>
+                                                                    <span><?=$arDay['DAY_NUM']?></span>
                                                                 <?else:?>
-                                                                    <?=$arDay['EVENT']['DATE_WINDOW']?>
+                                                                    <?=$arDay['DAY_NUM']?>
                                                                 <?endif?>
                                                             </div>
                                                             <div class="mp-calendar-item__avatar">
-                                                                <img class="image" src="<?=$arDay['EVENT']['LECTURER_DATA']['AVATAR']?>" alt="<?=$arDay['EVENT']['LECTURER_DATA']['NAME']?>">
+                                                                <img class="image" src="<?=$templateFolder?>/img/icon-default-event.png" alt="<?=GetMessage('AURORI_CALENDAR_DEFAULT_AVATAR_ICON_ALT')?>">
                                                             </div>
-                                                            <?if (strlen($arDay['EVENT']['PROPERTY_CITY_VALUE'])):?>
-                                                                <div class="mp-calendar-item__city mp-calendar-item__descr">
-                                                                    <?=$arDay['EVENT']['PROPERTY_CITY_VALUE']?>
-                                                                </div>
-                                                            <?endif?>
-                                                            <div class="mp-calendar-item__descr">
-                                                                <?=$arDay['EVENT']['NAME']?>
+                                                            <div class="mp-calendar-item__descr mp-calendar-item__descr--big">
+                                                                <?=GetMessage('AURORI_CALENDAR_DEFAULT_EVENT_DEFAULT_HEADING')?>
                                                             </div>
                                                             <div class="mp-calendar-item__arrow">
                                                                 <img class="image" src="<?=SITE_TEMPLATE_PATH?>/images/svg/mp-calendar-item-arrow.svg" alt="<?=GetMessage('AURORI_CALENDAR_DEFAULT_ARROW_ICON_ALT')?>">

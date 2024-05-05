@@ -64,8 +64,8 @@ class CAuroriCalendar extends CBitrixComponent {
             )
         );
         while ($arrEventsSelection = $objEventsSelection->GetNext()) {
-            $dateStart = new DateTime($arrEventsSelection['DATE_ACTIVE_FROM']);
-            $dateEnd = new DateTime($arrEventsSelection['DATE_ACTIVE_TO']?:$arrEventsSelection['DATE_ACTIVE_FROM']);
+            $dateStart = new DateTime(FormatDate('d.m.Y', MakeTimeStamp($arrEventsSelection['DATE_ACTIVE_FROM'])));
+            $dateEnd = new DateTime(FormatDate('d.m.Y', MakeTimeStamp($arrEventsSelection['DATE_ACTIVE_TO']?:$arrEventsSelection['DATE_ACTIVE_FROM'])));
             $daysLen  = $dateEnd->diff($dateStart)->format('%a');
             $arrEventsSelection['DAYS_LENGTH'] = $daysLen + 1;
 
@@ -88,11 +88,27 @@ class CAuroriCalendar extends CBitrixComponent {
                 $arrEventsSelection['DATE_WINDOW'] = $dateWindow;
             }
 
-            $eventsSelection[$arrEventsSelection['DATE_ACTIVE_FROM']][] = $arrEventsSelection;
+            if ($dateEnd > $dateStart) {
+                $period = new DatePeriod(
+                    $dateStart,
+                    new DateInterval('P1D'),
+                    $dateEnd
+                );
+
+                foreach ($period as $key => $value) {
+                    //echo $key.': '.$value->format('d.m.Y').'<br>';
+                    $eventsSelection[$value->format('d.m.Y')][] = $arrEventsSelection;
+                }
+
+                $date = FormatDate('d.m.Y', MakeTimeStamp($arrEventsSelection['DATE_ACTIVE_TO']));
+                //echo 'plus '.$date.'<br>';
+                $eventsSelection[$date][] = $arrEventsSelection;
+            } else {
+                $date = FormatDate('d.m.Y', MakeTimeStamp($arrEventsSelection['DATE_ACTIVE_FROM']));
+                $eventsSelection[$date][] = $arrEventsSelection;
+            }
         }
         /***/
-
-        $processedEvent = null;
 
         for ($i = 0; $i < $paramsMonths; $i++) {
             $processedMonth = [];
@@ -126,32 +142,10 @@ class CAuroriCalendar extends CBitrixComponent {
                 $dayFullDate = $dayFullNum.'.'.$processedMonth['MONTH_FULL'].'.'.$processedMonth['YEAR_NUM'];
                 $weekday = date('w', strtotime($dayFullDate));
 
-                $subdued = 'N';
-                if ($processedEvent !== null) {
-                    $event = $processedEvent;
-                    $subdued = 'Y';
-
-                    if ($processedEvent['DAYS_LEFT'] - 1 == 0) {
-                        $processedEvent = null;
-                    } else {
-                        $processedEvent['DAYS_LEFT']--;
-                    }
+                if (is_array($eventsSelection[$dayFullDate]) && !empty(is_array($eventsSelection[$dayFullDate]))) {
+                    $events = $eventsSelection[$dayFullDate];
                 } else {
-                    if (is_array($eventsSelection[$dayFullDate]) && !empty(is_array($eventsSelection[$dayFullDate]))) {
-                        $event = $eventsSelection[$dayFullDate][0];
-
-                        if ($event['DAYS_LENGTH'] > 1) {
-                            $daysLeft = $event['DAYS_LENGTH'] - 1;
-                            $processedEvent = $event;
-                            $processedEvent['DAYS_LEFT'] = $daysLeft;
-
-                            if (($processedMonth['LAST_DAY'] - $j) + 1 < $event['DAYS_LENGTH']) {
-                                $event['DAYS_LEFT_THIS_MONTH'] = (($processedMonth['LAST_DAY'] - $j) + 1);
-                            }
-                        }
-                    } else {
-                        $event = [];
-                    }
+                    $events = [];
                 }
 
                 $dayArray = array(
@@ -159,8 +153,7 @@ class CAuroriCalendar extends CBitrixComponent {
                     'DAY_NUM' => $j,
                     'FULL_DATE' => $dayFullDate,
                     'IS_WEEKEND' => in_array($weekday, [0, 6]) ? 'Y' : 'N',
-                    'SUBDUED' => $subdued,
-                    'EVENT' => $event,
+                    'EVENTS' => $events,
                 );
 
                 $processedMonth['DAYS'][] = $dayArray;

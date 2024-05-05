@@ -28,4 +28,13 @@ $(function () {
             }
         }
     });
+
+    $('[data-calendar-item]').fancybox({
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="{{CLOSE}}">' +
+                '</button>'
+        },
+        touch: false,
+    });
 });
