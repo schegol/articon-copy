@@ -1,6 +1,6 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "Ознакомиться с новостями компании Артикон");
-$APPLICATION->SetTitle("Новости Артикон");
+$APPLICATION->SetPageProperty("title", "Ознакомиться с новостями компании Dental Korzina");
+$APPLICATION->SetTitle("Новости Dental Korzina");
 ?>
 
 <?$APPLICATION->IncludeComponent(

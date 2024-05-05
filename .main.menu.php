@@ -29,13 +29,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Индивидуальное обучение", 
-		"/individual/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Контакты", 
 		"/contacts/", 
 		Array(), 

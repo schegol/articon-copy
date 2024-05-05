@@ -186,14 +186,16 @@ $this->setFrameMode(true);
 </section>
 
 <?$APPLICATION->IncludeComponent(
-    "pk:form.simple",
-    "contacts_form",
-    Array(
-        "IBLOCK_ID" => "7",
-        "AJAX" => "Y",
-        "LOAD_JS_CSS" => "Y",
-        "SOGLASIE" => "Y",
-        "SHOW_ERROR" => "Y",
-        "SHOW_TEXT" => "Y",
-    )
+	"pk:form.simple", 
+	"contacts_form", 
+	array(
+		"IBLOCK_ID" => "7",
+		"AJAX" => "Y",
+		"LOAD_JS_CSS" => "Y",
+		"SOGLASIE" => "Y",
+		"SHOW_ERROR" => "Y",
+		"SHOW_TEXT" => "Y",
+		"COMPONENT_TEMPLATE" => "contacts_form"
+	),
+	false
 );?>

@@ -1,5 +1,5 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "О компании Артикон");
+$APPLICATION->SetPageProperty("title", "О компании Dental Korzina");
 $APPLICATION->SetTitle("О нас");
 ?>
 

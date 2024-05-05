@@ -1,6 +1,6 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-$APPLICATION->SetTitle('Articon — Главная страница');
+$APPLICATION->SetTitle("Dental Korzina — Главная страница");
 ?>
 
 <?$APPLICATION->IncludeComponent(
