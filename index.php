@@ -74,6 +74,7 @@ $APPLICATION->SetTitle("Dental Korzina — Главная страница");
         "IBLOCK_ID" => "18",
         "DIRECTIONS_IBLOCK_ID" => "9",
         "MONTHS" => "3",
+        "INCLUDE_FROM_PERIOD_START" => "N",
     )
 );?>
 

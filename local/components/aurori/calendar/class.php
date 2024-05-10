@@ -27,12 +27,18 @@ class CAuroriCalendar extends CBitrixComponent {
 
         $paramsIBlock = $this->arParams['IBLOCK_ID'];
         $paramsMonths = $this->arParams['MONTHS'];
+        $fromPeriodStart = $this->arParams['INCLUDE_FROM_PERIOD_START'] == 'Y';
 
         $arResult = [];
         $arResult['MONTHS'] = [];
         $arResult['DIRECTIONS_IBLOCK_ID'] = $this->arParams['DIRECTIONS_IBLOCK_ID'];
 
-        $today = time();
+        if ($fromPeriodStart) {
+            $today = strtotime(date('Y-m-01 00:00:00'));
+        } else {
+            $today = time();
+        }
+
         $todayFormatted = date('d.m.Y', $today);
         $initialMonth = intval(date('n', $today));
         $initialYear = intval(date('Y', $today));

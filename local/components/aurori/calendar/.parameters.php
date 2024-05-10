@@ -22,7 +22,6 @@ $arComponentParameters = array(
             'VALUES' =>  $paramIBlocks,
             'REFRESH' =>  'Y',
             'MULTIPLE' =>  'N',
-
         ),
         'DIRECTIONS_IBLOCK_ID' => array(
             'PARENT' => 'BASE',
@@ -31,14 +30,21 @@ $arComponentParameters = array(
             'VALUES' =>  $paramIBlocks,
             'REFRESH' =>  'Y',
             'MULTIPLE' =>  'N',
-
         ),
         'MONTHS' => array(
             'PARENT' => 'BASE',
             'NAME' => GetMessage('PARAMETERS_AURORI_CALENDAR_MONTHS'),
             'TYPE' => 'STRING',
-            'MULTIPLE' => 'Y',
+            'MULTIPLE' => 'N',
             'DEFAULT' => '3',
+        ),
+        'INCLUDE_FROM_PERIOD_START' => array(
+            'PARENT' => 'BASE',
+            'NAME' => GetMessage('PARAMETERS_AURORI_CALENDAR_INCLUDE_FROM_PERIOD_START'),
+            'TYPE' => 'CHECKBOX',
+            'MULTIPLE' => 'N',
+            'REFRESH' => 'Y',
+            'DEFAULT' => 'N',
         ),
     ),
 );

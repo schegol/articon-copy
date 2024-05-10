@@ -18,7 +18,7 @@ $request = $context->getRequest();
 
 global $arrFilter;
 $arrFilter['ACTIVE_DATE'] = false;
-$arrFilter['>=DATE_ACTIVE_FROM'] = ConvertTimeStamp(false, 'SHORT');
+//$arrFilter['>=DATE_ACTIVE_FROM'] = ConvertTimeStamp(false, 'SHORT');
 
 if (strlen($request['section']) && (int)$request['section'] > 0) {
     $arrFilter['SECTION_ID'] = $request['section'];

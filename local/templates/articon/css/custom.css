@@ -515,6 +515,10 @@ a.video {
     border-color: var(--new-skyblue);
 }
 
+.mp-one-slide-item__bg {
+    display: block;
+}
+
 @media (min-width: 768px) {
     h1.section-title,
     .section-title-block h1 {
