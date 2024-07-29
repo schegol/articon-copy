@@ -2,8 +2,7 @@
 
 use Bitrix\Main\Page\Asset;
 
-?>
-        <section class="section-seo">
+?>        <section class="section-seo">
             <?getSeoBlock()?>
         </section>
 
@@ -157,6 +156,34 @@ use Bitrix\Main\Page\Asset;
                     </div>
                 </div>
             </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Dental Korzina",
+  "url": "http://dk-edu.com/",
+  "logo": "http://dk-edu.com/local/templates/articon/images/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+9969990019 44",
+    "contactType": "customer service",
+    "areaServed": "KG",
+    "availableLanguage": "Russian"
+  },
+  "sameAs": "https://www.instagram.com/dentalkorzina/"
+}
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "dk-edu.com",
+  "url": "http://dk-edu.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://dk-edu.com/{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
         </footer>
     </div>
 </body>

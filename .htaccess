@@ -19,10 +19,11 @@ ErrorDocument 404 /404.php
   RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
   RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
   RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+
 </IfModule>
 
 <IfModule mod_dir.c>
-  DirectoryIndex index.php index.html
+
 </IfModule>
 
 <IfModule mod_expires.c>

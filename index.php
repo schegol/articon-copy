@@ -68,14 +68,16 @@ $APPLICATION->SetTitle("Dental Korzina — Главная страница");
 );?>
 
 <?$APPLICATION->IncludeComponent(
-    "aurori:calendar",
-    "",
-    Array(
-        "IBLOCK_ID" => "18",
-        "DIRECTIONS_IBLOCK_ID" => "9",
-        "MONTHS" => "3",
-        "INCLUDE_FROM_PERIOD_START" => "N",
-    )
+	"aurori:calendar", 
+	".default", 
+	array(
+		"IBLOCK_ID" => "18",
+		"DIRECTIONS_IBLOCK_ID" => "9",
+		"MONTHS" => "3",
+		"INCLUDE_FROM_PERIOD_START" => "Y",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?>
 
 <section class="section-mp-news">

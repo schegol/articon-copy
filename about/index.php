@@ -1,4 +1,6 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("keywords", "учебный центр для стоматологов");
+$APPLICATION->SetPageProperty("description", "Самый масштабный учебный центр для врачей-стоматологов и зубных техников в Центральной Азии");
 $APPLICATION->SetPageProperty("title", "О компании Dental Korzina");
 $APPLICATION->SetTitle("О нас");
 ?>

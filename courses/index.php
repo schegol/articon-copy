@@ -92,7 +92,7 @@ $APPLICATION->SetTitle("Курсы");
 		"COMPONENT_TEMPLATE" => "courses",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
-			"section" => "",
+			"section" => "#SECTION_ID#/#ELEMENT_ID#/",
 			"detail" => "#ELEMENT_ID#/",
 		)
 	),

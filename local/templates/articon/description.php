@@ -1,4 +1,8 @@
-<?$arTemplate = Array(
-  'NAME' => GetMessage('TEMPLATE_NAME'),
-  'DESCRIPTION' => GetMessage('TEMPLATE_DESC')
-);?>
+<?
+$arTemplate = array (
+  'NAME' => 'Articon',
+  'DESCRIPTION' => 'Шаблон сайта Articon Education',
+  'SORT' => '',
+  'TYPE' => '',
+);
+?>
