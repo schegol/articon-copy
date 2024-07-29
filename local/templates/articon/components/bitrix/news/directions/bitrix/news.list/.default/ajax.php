@@ -56,7 +56,7 @@ if (CModule::IncludeModule('iblock')) {
             "DISPLAY_TOP_PAGER" => "",
             "DISPLAY_BOTTOM_PAGER" => "1",
             "PAGER_TITLE" => "Новости",
-            "PAGER_TEMPLATE" => "courses",
+            "PAGER_TEMPLATE" => "directions",
             "PAGER_SHOW_ALWAYS" => "",
             "PAGER_DESC_NUMBERING" => "",
             "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000000",

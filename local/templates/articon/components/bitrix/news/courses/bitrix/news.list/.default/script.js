@@ -15,7 +15,7 @@ $(function () {
                     url: coursesListTemplatePath + '/ajax.php?iblock=' + iBlockId + '&section=' + id,
                     dataType: 'html',
                     success: function(data) {
-                        // console.log(data);
+                        console.log(data);
                         let filteredData = $(data).find('.course-items-block'),
                             filterItems = filteredData.find('.col-12.col-lg-6');
 
