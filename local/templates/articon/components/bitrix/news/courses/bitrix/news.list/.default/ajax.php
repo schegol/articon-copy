@@ -30,7 +30,7 @@ if (CModule::IncludeModule('iblock')) {
             "IBLOCK_ID" => $iBlock,
             "NEWS_COUNT" => "6",
             "SORT_BY1" => "ACTIVE_FROM",
-            "SORT_ORDER1" => "ASC",
+            "SORT_ORDER1" => "DESC",
             "SORT_BY2" => "SORT",
             "SORT_ORDER2" => "ASC",
             "FIELD_CODE" => array(
